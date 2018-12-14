@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="49589de0-52bc-48e0-8c4f-1794759ae886" name="Default Changelist" comment="" />
+    <list default="true" id="49589de0-52bc-48e0-8c4f-1794759ae886" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainClass.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,6 +48,26 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="1439745654">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="125" />
+          <entry key="txt" value="12" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="125" />
+          <entry key="PLAIN_TEXT" value="12" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -60,15 +83,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/MainClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="233" column="16" selection-start-line="233" selection-start-column="16" selection-end-line="233" selection-end-column="16" />
+            <state relative-caret-position="158">
+              <caret line="260" column="60" selection-start-line="260" selection-start-column="60" selection-end-line="260" selection-end-column="60" />
               <folding>
                 <element signature="method#settings#0;class#MainClass#0" />
                 <element signature="method#setup#0;class#MainClass#0" />
                 <element signature="e#688#702#0" />
-                <element signature="e#1488#1509#0" />
-                <element signature="e#2925#2948#0" />
-                <element signature="e#3316#3353#0" />
+                <element signature="e#1446#1467#0" />
+                <element signature="e#2212#2235#0" />
+                <element signature="e#2603#2640#0" />
                 <element signature="method#reset#0;class#MainClass#0" />
                 <element signature="method#boardColor#0;class#MainClass#0" />
                 <element signature="method#mouseoverBox#0;class#MainClass#0" />
@@ -101,6 +124,9 @@
       <find>selectedDame</find>
     </findStrings>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -123,46 +149,15 @@
     <option name="width" value="1296" />
     <option name="height" value="690" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="Wiesinger_Dame" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Wiesinger_Dame" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Wiesinger_Dame" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Wiesinger_Dame" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Wiesinger_Dame" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Wiesinger_Dame" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Wiesinger_Dame" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Wiesinger_Dame" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544775059321" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544778337901" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
@@ -202,6 +197,14 @@
       <option name="presentableId" value="Default" />
       <updated>1543576342325</updated>
     </task>
+    <task id="LOCAL-00001" summary="nicht fertig">
+      <created>1544775044782</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1544775044782</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -239,6 +242,10 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="nicht fertig" />
+    <option name="LAST_COMMIT_MESSAGE" value="nicht fertig" />
+  </component>
   <component name="editorHistoryManager">
     <entry file="file://F:/SEW/assignment04-robot-processing-wieisngerjonas (erweitert)/src/main/java/at/htl/robot/gui/Main.java" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
@@ -257,15 +264,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/MainClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="233" column="16" selection-start-line="233" selection-start-column="16" selection-end-line="233" selection-end-column="16" />
+        <state relative-caret-position="158">
+          <caret line="260" column="60" selection-start-line="260" selection-start-column="60" selection-end-line="260" selection-end-column="60" />
           <folding>
             <element signature="method#settings#0;class#MainClass#0" />
             <element signature="method#setup#0;class#MainClass#0" />
             <element signature="e#688#702#0" />
-            <element signature="e#1488#1509#0" />
-            <element signature="e#2925#2948#0" />
-            <element signature="e#3316#3353#0" />
+            <element signature="e#1446#1467#0" />
+            <element signature="e#2212#2235#0" />
+            <element signature="e#2603#2640#0" />
             <element signature="method#reset#0;class#MainClass#0" />
             <element signature="method#boardColor#0;class#MainClass#0" />
             <element signature="method#mouseoverBox#0;class#MainClass#0" />

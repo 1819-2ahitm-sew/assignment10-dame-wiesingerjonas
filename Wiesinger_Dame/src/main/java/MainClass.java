@@ -220,22 +220,47 @@ public class MainClass extends PApplet {
         fill(255, 231, 204);
         if(selectedDame != -1) {
 
-            if(selectedDame < 12){
+            System.out.println(damenarray[selectedDame].X);
 
-                Boolean isOccupied = false;
+
+            Boolean isOccupied = false;
+            if(selectedDame < 12){
 
                 for (int i = 0; i < damenarray.length; i++) {
                     if (damenarray[i].X == damenarray[selectedDame].X - boxlength && damenarray[i].Y == damenarray[selectedDame].Y + boxlength){
                         isOccupied = true;
                     }
                 }
-                if(!isOccupied){
+                if(!isOccupied && damenarray[selectedDame].X != leftMargin + boxlength/2){
                 rect(damenarray[selectedDame].X - boxlength * 1.5f, damenarray[selectedDame].Y + boxlength / 2f, boxlength, boxlength);
                 }
-                rect(damenarray[selectedDame].X + boxlength * 0.5f, damenarray[selectedDame].Y + boxlength / 2f, boxlength, boxlength);
+                isOccupied = false;
+                for (int i = 0; i < damenarray.length; i++) {
+                    if (damenarray[i].X == damenarray[selectedDame].X + boxlength && damenarray[i].Y == damenarray[selectedDame].Y + boxlength){
+                        isOccupied = true;
+                    }
+                }
+                if(!isOccupied && damenarray[selectedDame].X != 7.5*boxlength + leftMargin){
+                    rect(damenarray[selectedDame].X + boxlength * 0.5f, damenarray[selectedDame].Y + boxlength / 2f, boxlength, boxlength);
+                }
             }else{
-                rect(damenarray[selectedDame].X - boxlength*1.5f, damenarray[selectedDame].Y - boxlength* 1.5f, boxlength, boxlength);
-                rect(damenarray[selectedDame].X + boxlength*0.5f, damenarray[selectedDame].Y - boxlength* 1.5f, boxlength, boxlength);
+                for (int i = 0; i < damenarray.length; i++) {
+                    if (damenarray[i].X == damenarray[selectedDame].X - boxlength && damenarray[i].Y == damenarray[selectedDame].Y - boxlength){
+                        isOccupied = true;
+                    }
+                }
+                if(!isOccupied && damenarray[selectedDame].X != leftMargin + boxlength/2){
+                    rect(damenarray[selectedDame].X - boxlength*1.5f, damenarray[selectedDame].Y - boxlength* 1.5f, boxlength, boxlength);
+                }
+                isOccupied = false;
+                for (int i = 0; i < damenarray.length; i++) {
+                    if (damenarray[i].X == damenarray[selectedDame].X + boxlength && damenarray[i].Y == damenarray[selectedDame].Y - boxlength){
+                        isOccupied = true;
+                    }
+                }
+                if(!isOccupied && damenarray[selectedDame].X != 7.5*boxlength + leftMargin){
+                    rect(damenarray[selectedDame].X + boxlength*0.5f, damenarray[selectedDame].Y - boxlength* 1.5f, boxlength, boxlength);
+                }
             }
         }
     }

@@ -234,6 +234,11 @@ public class MainClass extends PApplet {
                             mouseX < damenarray[selectedDame].X - boxlength * 0.5f &&
                             mouseY > damenarray[selectedDame].Y + boxlength / 2f &&
                             mouseY < damenarray[selectedDame].Y + boxlength * 1.5f){
+
+                        if(mousePressed){
+                            damenarray = moveDame(damenarray, selectedDame, 1);
+                        }
+
                         fill(255, 231, 204);
                     }
 
@@ -253,6 +258,11 @@ public class MainClass extends PApplet {
                             mouseX < damenarray[selectedDame].X + boxlength * 1.5f &&
                             mouseY > damenarray[selectedDame].Y + boxlength / 2f &&
                             mouseY < damenarray[selectedDame].Y + boxlength * 1.5f){
+
+                        if(mousePressed){
+                            damenarray = moveDame(damenarray, selectedDame, 2);
+                        }
+
                         fill(255, 231, 204);
                     }
                     rect(damenarray[selectedDame].X + boxlength * 0.5f, damenarray[selectedDame].Y + boxlength / 2f, boxlength, boxlength);
@@ -270,6 +280,10 @@ public class MainClass extends PApplet {
                             mouseX < damenarray[selectedDame].X - boxlength*0.5f &&
                             mouseY > damenarray[selectedDame].Y - boxlength*1.5f &&
                             mouseY < damenarray[selectedDame].Y - boxlength*0.5f){
+                        if(mousePressed){
+                            damenarray = moveDame(damenarray, selectedDame, 3);
+                        }
+
                         fill(255, 231, 204);
                     }
                     rect(damenarray[selectedDame].X - boxlength*1.5f, damenarray[selectedDame].Y - boxlength* 1.5f, boxlength, boxlength);
@@ -287,6 +301,9 @@ public class MainClass extends PApplet {
                             mouseX < damenarray[selectedDame].X + boxlength*1.5 &&
                             mouseY > damenarray[selectedDame].Y - boxlength*1.5f &&
                             mouseY < damenarray[selectedDame].Y - boxlength*0.5f){
+                        if(mousePressed){
+                            damenarray = moveDame(damenarray, selectedDame, 4);
+                        }
                         fill(255, 231, 204);
                     }
 
@@ -294,5 +311,31 @@ public class MainClass extends PApplet {
                 }
             }
         }
+    }
+
+    public Dame[] moveDame(Dame[] damenarray, int selectedDame, int direction){
+        int x = damenarray[selectedDame].X;
+        int y = damenarray[selectedDame].Y;
+
+        switch (direction){
+            case 1: x = x-boxlength;
+                    y = y+boxlength;
+                    break;
+            case 2: x = x+boxlength;
+                    y = y+boxlength;
+                    break;
+            case 3: x = x-boxlength;
+                    y = y-boxlength;
+                    break;
+            case 4: x = x+boxlength;
+                    y = y-boxlength;
+                    break;
+            default: break;
+        }
+
+        damenarray[selectedDame].setX(x);
+        damenarray[selectedDame].setY(y);
+
+        return damenarray;
     }
 }

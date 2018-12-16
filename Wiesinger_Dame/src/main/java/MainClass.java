@@ -8,6 +8,7 @@ public class MainClass extends PApplet {
     int selectedDame = -1;
     Dame[] damenarray = new Dame[24];
     boolean start = true;
+    boolean whitesturn = true;
 
     public static void main(String[] args) {
         PApplet.main("MainClass", args);
@@ -77,9 +78,10 @@ public class MainClass extends PApplet {
             rect(damenarray[hoveredIndex].X -boxlength/2, damenarray[hoveredIndex].Y - boxlength/2, boxlength, boxlength);
         }
 
-
-        if(selectedDame != -1){
-            fill(255);
+        fill(255);
+        if(selectedDame != -1 && whitesturn && selectedDame<12){
+            rect(damenarray[selectedDame].X -boxlength/2, damenarray[selectedDame].Y - boxlength/2, boxlength, boxlength);
+        }else if(selectedDame != -1 && !whitesturn && selectedDame>=12){
             rect(damenarray[selectedDame].X -boxlength/2, damenarray[selectedDame].Y - boxlength/2, boxlength, boxlength);
         }
         //endregion
@@ -104,7 +106,11 @@ public class MainClass extends PApplet {
         rect(leftMargin, upperMargin*2 + 8*boxlength, 8*boxlength, 25);
         textSize(boxlength/5);
         fill(0);
-        text("Weiß ist an der Reihe", leftMargin + 5, upperMargin*2 + 8*boxlength + boxlength/5);
+        if(whitesturn) {
+            text("Weiß ist an der Reihe", leftMargin + 5, upperMargin * 2 + 8 * boxlength + boxlength / 5);
+        }else{
+            text("Schwarz ist an der Reihe", leftMargin + 5, upperMargin * 2 + 8 * boxlength + boxlength / 5);
+        }
 
         if(mouseoverBox(mouseX, mouseY) && mousePressed){
             fill(193, 148, 93);
@@ -221,7 +227,7 @@ public class MainClass extends PApplet {
         if(selectedDame != -1) {
 
             Boolean isOccupied = false;
-            if(selectedDame < 12){
+            if(selectedDame < 12 && whitesturn){
 
                 for (int i = 0; i < damenarray.length; i++) {
                     if (damenarray[i].X == damenarray[selectedDame].X - boxlength && damenarray[i].Y == damenarray[selectedDame].Y + boxlength){
@@ -268,7 +274,7 @@ public class MainClass extends PApplet {
                     rect(damenarray[selectedDame].X + boxlength * 0.5f, damenarray[selectedDame].Y + boxlength / 2f, boxlength, boxlength);
                     fill(242, 218, 191);
                 }
-            }else{
+            }else if(selectedDame >= 12 && !whitesturn){
                 for (int i = 0; i < damenarray.length; i++) {
                     if (damenarray[i].X == damenarray[selectedDame].X - boxlength && damenarray[i].Y == damenarray[selectedDame].Y - boxlength){
                         isOccupied = true;
@@ -335,6 +341,12 @@ public class MainClass extends PApplet {
 
         damenarray[selectedDame].setX(x);
         damenarray[selectedDame].setY(y);
+
+        if(whitesturn){
+            whitesturn = false;
+        }else{
+            whitesturn = true;
+        }
 
         return damenarray;
     }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="49589de0-52bc-48e0-8c4f-1794759ae886" name="Default Changelist" comment="Wennn Weiß dran ist kann man schwarze Damen nicht auswählen, und vice versa. Untere Box schreibt hin wer dran ist.">
+    <list default="true" id="49589de0-52bc-48e0-8c4f-1794759ae886" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainClass.java" afterDir="false" />
     </list>
@@ -51,22 +51,24 @@
     <session id="1439745654">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="7" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.open.time.7" value="1" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.7" value="3" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.open.time.9" value="2" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="900" />
+          <entry key="java" value="1283" />
           <entry key="txt" value="290" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="900" />
+          <entry key="JAVA" value="1283" />
           <entry key="PLAIN_TEXT" value="290" />
         </counts>
       </usages-collector>
@@ -86,18 +88,23 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/MainClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="61">
-              <caret line="111" column="25" selection-start-line="111" selection-start-column="25" selection-end-line="111" selection-end-column="25" />
+            <state relative-caret-position="294">
+              <caret line="332" column="16" selection-start-line="332" selection-start-column="16" selection-end-line="332" selection-end-column="16" />
               <folding>
                 <element signature="method#settings#0;class#MainClass#0" />
                 <element signature="method#setup#0;class#MainClass#0" />
-                <element signature="e#688#702#0" />
-                <element signature="e#2212#2235#0" />
+                <element signature="e#719#733#0" />
+                <element signature="e#1477#1498#0" />
+                <element signature="e#2467#2490#0" />
+                <element signature="e#2858#2895#0" />
                 <element signature="method#reset#0;class#MainClass#0" />
                 <element signature="method#boardColor#0;class#MainClass#0" />
                 <element signature="method#mouseoverBox#0;class#MainClass#0" />
                 <element signature="method#isMouseOverDame#0;class#MainClass#0" />
-                <element signature="method#drawSuggestion#0;class#MainClass#0" />
+                <element signature="e#6826#6852#0" />
+                <element signature="e#8257#8284#0" />
+                <element signature="e#9786#9815#0" />
+                <element signature="e#11255#11283#0" />
                 <element signature="method#moveDame#0;class#MainClass#0" />
               </folding>
             </state>
@@ -153,10 +160,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1296" />
-    <option name="height" value="690" />
+    <option name="x" value="-12" />
+    <option name="y" value="-12" />
+    <option name="width" value="1944" />
+    <option name="height" value="1044" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -166,8 +173,8 @@
     <panes />
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544867460779" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545377675725" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Desktop/assignment11-figurenmanager2-schollsebastian" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -227,11 +234,19 @@
       <option name="project" value="LOCAL" />
       <updated>1544867450132</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Wennn Weiß dran ist kann man schwarze Damen nicht auswählen, und vice versa. Untere Box schreibt hin wer dran ist.">
+      <created>1544949209744</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1544949209745</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49604222" weight="0.302834" />
       <window_info id="Image Layers" order="1" />
@@ -242,7 +257,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3268206" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3268206" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -250,7 +265,7 @@
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Messages" order="10" visible="true" weight="0.3285968" />
+      <window_info anchor="bottom" id="Messages" order="10" weight="0.3285968" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -295,18 +310,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/MainClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="61">
-          <caret line="111" column="25" selection-start-line="111" selection-start-column="25" selection-end-line="111" selection-end-column="25" />
+        <state relative-caret-position="294">
+          <caret line="332" column="16" selection-start-line="332" selection-start-column="16" selection-end-line="332" selection-end-column="16" />
           <folding>
             <element signature="method#settings#0;class#MainClass#0" />
             <element signature="method#setup#0;class#MainClass#0" />
-            <element signature="e#688#702#0" />
-            <element signature="e#2212#2235#0" />
+            <element signature="e#719#733#0" />
+            <element signature="e#1477#1498#0" />
+            <element signature="e#2467#2490#0" />
+            <element signature="e#2858#2895#0" />
             <element signature="method#reset#0;class#MainClass#0" />
             <element signature="method#boardColor#0;class#MainClass#0" />
             <element signature="method#mouseoverBox#0;class#MainClass#0" />
             <element signature="method#isMouseOverDame#0;class#MainClass#0" />
-            <element signature="method#drawSuggestion#0;class#MainClass#0" />
+            <element signature="e#6826#6852#0" />
+            <element signature="e#8257#8284#0" />
+            <element signature="e#9786#9815#0" />
+            <element signature="e#11255#11283#0" />
             <element signature="method#moveDame#0;class#MainClass#0" />
           </folding>
         </state>

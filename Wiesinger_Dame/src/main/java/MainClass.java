@@ -227,11 +227,14 @@ public class MainClass extends PApplet {
         if(selectedDame != -1) {
 
             Boolean isOccupied = false;
+            int occupant = -1;
             if(selectedDame < 12 && whitesturn){
 
+                //region weiß: links unten
                 for (int i = 0; i < damenarray.length; i++) {
                     if (damenarray[i].X == damenarray[selectedDame].X - boxlength && damenarray[i].Y == damenarray[selectedDame].Y + boxlength){
                         isOccupied = true;
+                        occupant = i;
                     }
                 }
                 if(!isOccupied && damenarray[selectedDame].X != leftMargin + boxlength/2){
@@ -252,10 +255,21 @@ public class MainClass extends PApplet {
                     fill(242, 218, 191);
 
                 }
+
+                if(isOccupied){
+                    if(occupant >= 12){
+                        beatSuggestion(damenarray, selectedDame, occupant);
+                    }
+                }
+                //endregion
+
+                //region weiß: rechts unten
                 isOccupied = false;
+                occupant = -1;
                 for (int i = 0; i < damenarray.length; i++) {
                     if (damenarray[i].X == damenarray[selectedDame].X + boxlength && damenarray[i].Y == damenarray[selectedDame].Y + boxlength){
                         isOccupied = true;
+                        occupant = i;
                     }
                 }
                 if(!isOccupied && damenarray[selectedDame].X != 7.5*boxlength + leftMargin){
@@ -274,10 +288,23 @@ public class MainClass extends PApplet {
                     rect(damenarray[selectedDame].X + boxlength * 0.5f, damenarray[selectedDame].Y + boxlength / 2f, boxlength, boxlength);
                     fill(242, 218, 191);
                 }
+
+                if(isOccupied){
+                    if(occupant >= 12){
+                        beatSuggestion(damenarray, selectedDame, occupant);
+                    }
+                }
+                //endregion
+
             }else if(selectedDame >= 12 && !whitesturn){
+
+                //region schwarz: rechts oben
+                isOccupied = false;
+                occupant = -1;
                 for (int i = 0; i < damenarray.length; i++) {
                     if (damenarray[i].X == damenarray[selectedDame].X - boxlength && damenarray[i].Y == damenarray[selectedDame].Y - boxlength){
                         isOccupied = true;
+                        occupant = i;
                     }
                 }
                 if(!isOccupied && damenarray[selectedDame].X != leftMargin + boxlength/2){
@@ -295,10 +322,21 @@ public class MainClass extends PApplet {
                     rect(damenarray[selectedDame].X - boxlength*1.5f, damenarray[selectedDame].Y - boxlength* 1.5f, boxlength, boxlength);
                     fill(242, 218, 191);
                 }
+
+                if(isOccupied){
+                    if(occupant < 12 && occupant != -1){
+                        beatSuggestion(damenarray, selectedDame, occupant);
+                    }
+                }
+                //endregion
+
+                //region schwarz: links oben
                 isOccupied = false;
+                occupant = -1;
                 for (int i = 0; i < damenarray.length; i++) {
                     if (damenarray[i].X == damenarray[selectedDame].X + boxlength && damenarray[i].Y == damenarray[selectedDame].Y - boxlength){
                         isOccupied = true;
+                        occupant = i;
                     }
                 }
                 if(!isOccupied && damenarray[selectedDame].X != 7.5*boxlength + leftMargin){
@@ -315,8 +353,18 @@ public class MainClass extends PApplet {
 
                     rect(damenarray[selectedDame].X + boxlength*0.5f, damenarray[selectedDame].Y - boxlength* 1.5f, boxlength, boxlength);
                 }
+                if(isOccupied){
+                    if(occupant < 12 && occupant != -1){
+                        beatSuggestion(damenarray, selectedDame, occupant);
+                    }
+                }
+                //endregion
             }
         }
+    }
+
+    public void beatSuggestion(Dame[] damenarray, int selectedDame, int occupant){
+        System.out.println("Just Beat it");
     }
 
     public Dame[] moveDame(Dame[] damenarray, int selectedDame, int direction){

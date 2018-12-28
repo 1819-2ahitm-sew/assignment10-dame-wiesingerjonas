@@ -127,6 +127,8 @@ public class MainClass extends PApplet {
         text("neues Spiel starten", leftMargin + 3* boxlength, upperMargin*2 + 8*boxlength + 50);
         fill(255);
         //endregion
+
+        System.out.println(damenarray[23].X);
     }
 
     public Dame[] reset(){
@@ -364,7 +366,82 @@ public class MainClass extends PApplet {
     }
 
     public void beatSuggestion(Dame[] damenarray, int selectedDame, int occupant){
-        System.out.println("Just Beat it");
+
+        //region occupant links unten
+        if(damenarray[selectedDame].Y < damenarray[occupant].Y && damenarray[selectedDame].X > damenarray[occupant].X){
+            if(damenarray[selectedDame].X != leftMargin + 1.5 * boxlength && damenarray[selectedDame].Y != upperMargin + 6.5* boxlength){
+
+                Boolean isOccupied = false;
+
+                for (int i = 0; i < damenarray.length; i++) {
+                    if(damenarray[i].X == damenarray[occupant].X - boxlength && damenarray[i].Y == damenarray[occupant].Y + boxlength){
+                        isOccupied = true;
+                    }
+                }
+
+                if(!isOccupied){
+                    rect(damenarray[occupant].X - 1.5f * boxlength, damenarray[occupant].Y + 0.5f * boxlength, boxlength, boxlength);
+                }
+            }
+        }//endregion
+
+        //region occupant rechts unten
+        if(damenarray[selectedDame].Y < damenarray[occupant].Y && damenarray[selectedDame].X < damenarray[occupant].X){
+            if(damenarray[selectedDame].X != leftMargin + 1.5 * boxlength && damenarray[selectedDame].Y != upperMargin + 6.5* boxlength){
+
+                Boolean isOccupied = false;
+
+                for (int i = 0; i < damenarray.length; i++) {
+                    if(damenarray[i].X == damenarray[occupant].X + boxlength && damenarray[i].Y == damenarray[occupant].Y + boxlength){
+                        isOccupied = true;
+                    }
+                }
+
+                if(!isOccupied){
+                    rect(damenarray[occupant].X + 0.5f * boxlength, damenarray[occupant].Y + 0.5f * boxlength, boxlength, boxlength);
+                }
+            }
+        } //endregion
+
+        //region occupant links oben
+        if(damenarray[selectedDame].Y > damenarray[occupant].Y && damenarray[selectedDame].X > damenarray[occupant].X){
+            if(damenarray[selectedDame].X != leftMargin + 1.5 * boxlength && damenarray[selectedDame].Y != upperMargin + 6.5* boxlength){
+
+                Boolean isOccupied = false;
+
+                for (int i = 0; i < damenarray.length; i++) {
+                    if(damenarray[i].X == damenarray[occupant].X - boxlength && damenarray[i].Y == damenarray[occupant].Y - boxlength){
+                        isOccupied = true;
+                    }
+                }
+
+                if(!isOccupied){
+                    rect(damenarray[occupant].X - 1.5f * boxlength, damenarray[occupant].Y - 1.5f * boxlength, boxlength, boxlength);
+                }
+            }
+        }//endregion
+
+        //region occupant rechts oben
+        if(damenarray[selectedDame].Y > damenarray[occupant].Y && damenarray[selectedDame].X < damenarray[occupant].X){
+
+            if(damenarray[selectedDame].X != leftMargin + 1.5 * boxlength && damenarray[selectedDame].Y != upperMargin + 6.5* boxlength){
+
+                Boolean isOccupied = false;
+
+                for (int i = 0; i < damenarray.length; i++) {
+                    if(damenarray[i].X == damenarray[occupant].X + boxlength && damenarray[i].Y == damenarray[occupant].Y - boxlength){
+                        isOccupied = true;
+                    }
+                }
+
+                if(!isOccupied){
+                    rect(damenarray[occupant].X + 0.5f * boxlength, damenarray[occupant].Y - 1.5f * boxlength, boxlength, boxlength);
+                }
+            }
+        }//endregion
+
+
+
     }
 
     public Dame[] moveDame(Dame[] damenarray, int selectedDame, int direction){

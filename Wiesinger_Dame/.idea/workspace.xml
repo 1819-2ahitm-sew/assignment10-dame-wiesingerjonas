@@ -51,27 +51,28 @@
     <session id="1439745654">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="9" />
+          <entry key="project.closed" value="12" />
           <entry key="project.open.time.12" value="1" />
           <entry key="project.open.time.15" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.4" value="1" />
-          <entry key="project.open.time.7" value="3" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.7" value="4" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="10" />
+          <entry key="project.open.time.9" value="3" />
+          <entry key="project.opened" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1911" />
-          <entry key="txt" value="365" />
+          <entry key="java" value="2647" />
+          <entry key="txt" value="402" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1911" />
-          <entry key="PLAIN_TEXT" value="365" />
+          <entry key="JAVA" value="2647" />
+          <entry key="PLAIN_TEXT" value="402" />
         </counts>
       </usages-collector>
     </session>
@@ -90,24 +91,28 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/MainClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="437" column="51" selection-start-line="437" selection-start-column="51" selection-end-line="437" selection-end-column="51" />
+            <state relative-caret-position="106">
+              <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
               <folding>
                 <element signature="method#settings#0;class#MainClass#0" />
                 <element signature="method#setup#0;class#MainClass#0" />
-                <element signature="e#719#733#0" />
-                <element signature="e#1477#1498#0" />
-                <element signature="e#2467#2490#0" />
                 <element signature="e#2858#2895#0" />
                 <element signature="method#reset#0;class#MainClass#0" />
                 <element signature="method#boardColor#0;class#MainClass#0" />
                 <element signature="method#mouseoverBox#0;class#MainClass#0" />
                 <element signature="method#isMouseOverDame#0;class#MainClass#0" />
                 <element signature="method#drawSuggestion#0;class#MainClass#0" />
-                <element signature="e#12962#12991#0" />
-                <element signature="e#13807#13837#0" />
-                <element signature="e#13989#14017#0" />
+                <element signature="e#6827#6853#0" />
+                <element signature="e#8258#8285#0" />
+                <element signature="e#9819#9848#0" />
+                <element signature="e#11336#11364#0" />
+                <element signature="e#12916#12945#0" />
+                <element signature="e#14337#14367#0" />
+                <element signature="e#15760#15788#0" />
+                <element signature="e#16391#16412#0" />
+                <element signature="e#17813#17834#0" />
                 <element signature="method#moveDame#0;class#MainClass#0" />
+                <element signature="method#beatDame#0;class#MainClass#0" />
               </folding>
             </state>
           </provider>
@@ -261,7 +266,14 @@
       <option name="project" value="LOCAL" />
       <updated>1545816971173</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Programm zeigt eine &quot;Schlag-Suggestion&quot; an">
+      <created>1546023004497</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1546023004497</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -305,7 +317,8 @@
     <MESSAGE value="Man kann mit den Damen bereits fahren und Reset Button funktioniert" />
     <MESSAGE value="Wennn Weiß dran ist kann man schwarze Damen nicht auswählen, und vice versa. Untere Box schreibt hin wer dran ist." />
     <MESSAGE value="Programm erkennt ob man theoretisch eine gegnerische Dame schlagen kann" />
-    <option name="LAST_COMMIT_MESSAGE" value="Programm erkennt ob man theoretisch eine gegnerische Dame schlagen kann" />
+    <MESSAGE value="Programm zeigt eine &quot;Schlag-Suggestion&quot; an" />
+    <option name="LAST_COMMIT_MESSAGE" value="Programm zeigt eine &quot;Schlag-Suggestion&quot; an" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://F:/SEW/assignment04-robot-processing-wieisngerjonas (erweitert)/src/main/java/at/htl/robot/gui/Main.java" />
@@ -331,24 +344,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/MainClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="437" column="51" selection-start-line="437" selection-start-column="51" selection-end-line="437" selection-end-column="51" />
+        <state relative-caret-position="106">
+          <caret line="32" column="19" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
           <folding>
             <element signature="method#settings#0;class#MainClass#0" />
             <element signature="method#setup#0;class#MainClass#0" />
-            <element signature="e#719#733#0" />
-            <element signature="e#1477#1498#0" />
-            <element signature="e#2467#2490#0" />
             <element signature="e#2858#2895#0" />
             <element signature="method#reset#0;class#MainClass#0" />
             <element signature="method#boardColor#0;class#MainClass#0" />
             <element signature="method#mouseoverBox#0;class#MainClass#0" />
             <element signature="method#isMouseOverDame#0;class#MainClass#0" />
             <element signature="method#drawSuggestion#0;class#MainClass#0" />
-            <element signature="e#12962#12991#0" />
-            <element signature="e#13807#13837#0" />
-            <element signature="e#13989#14017#0" />
+            <element signature="e#6827#6853#0" />
+            <element signature="e#8258#8285#0" />
+            <element signature="e#9819#9848#0" />
+            <element signature="e#11336#11364#0" />
+            <element signature="e#12916#12945#0" />
+            <element signature="e#14337#14367#0" />
+            <element signature="e#15760#15788#0" />
+            <element signature="e#16391#16412#0" />
+            <element signature="e#17813#17834#0" />
             <element signature="method#moveDame#0;class#MainClass#0" />
+            <element signature="method#beatDame#0;class#MainClass#0" />
           </folding>
         </state>
       </provider>

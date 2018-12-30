@@ -92,12 +92,16 @@ public class MainClass extends PApplet {
         stroke(0);
         fill(50);
         for (int i = 12; i < 24; i++) {
-            ellipse(damenarray[i].X, damenarray[i].Y, boxlength /5 * 4, boxlength /5 * 4);
+            if(damenarray[i].X != -1 && damenarray[i].Y != -1) {
+            ellipse(damenarray[i].X, damenarray[i].Y, boxlength /5f * 4, boxlength /5f * 4);
+            }
         }
 
         fill(245);
         for (int i = 0; i < 12; i++) {
-            ellipse(damenarray[i].X, damenarray[i].Y, boxlength /5 * 4, boxlength /5 * 4);
+            if(damenarray[i].X != -1 && damenarray[i].Y != -1) {
+                ellipse(damenarray[i].X, damenarray[i].Y, boxlength / 5f * 4, boxlength / 5f * 4);
+            }
         }
         //endregion
 
@@ -128,7 +132,6 @@ public class MainClass extends PApplet {
         fill(255);
         //endregion
 
-        System.out.println(damenarray[23].X);
     }
 
     public Dame[] reset(){
@@ -166,6 +169,8 @@ public class MainClass extends PApplet {
             j = j + 2;
         }
 
+        whitesturn = true;
+        selectedDame = 0;
 
         return array;
     }
@@ -379,15 +384,30 @@ public class MainClass extends PApplet {
                     }
                 }
 
+                //region hover-Effekt
+
+                if(     mouseX <= damenarray[occupant].X - 0.5f * boxlength &&
+                        mouseX >= damenarray[occupant].X - 1.5f * boxlength &&
+                        mouseY <= damenarray[occupant].Y + 1.5f * boxlength &&
+                        mouseY >= damenarray[occupant].Y + 0.5f * boxlength){
+                    fill(255, 231, 204);
+
+                    if(mousePressed){
+                        beatDame(damenarray, occupant, selectedDame, 1);
+                    }
+                }
+                //endregion
+
                 if(!isOccupied){
                     rect(damenarray[occupant].X - 1.5f * boxlength, damenarray[occupant].Y + 0.5f * boxlength, boxlength, boxlength);
                 }
+                fill(242, 218, 191);
             }
         }//endregion
 
         //region occupant rechts unten
         if(damenarray[selectedDame].Y < damenarray[occupant].Y && damenarray[selectedDame].X < damenarray[occupant].X){
-            if(damenarray[selectedDame].X != leftMargin + 1.5 * boxlength && damenarray[selectedDame].Y != upperMargin + 6.5* boxlength){
+            if(damenarray[selectedDame].X != leftMargin + 6.5 * boxlength && damenarray[selectedDame].Y != upperMargin + 6.5* boxlength){
 
                 Boolean isOccupied = false;
 
@@ -397,15 +417,29 @@ public class MainClass extends PApplet {
                     }
                 }
 
+                //region hover-Effekt
+
+                if(     mouseX <= damenarray[occupant].X + 1.5f * boxlength &&
+                        mouseX >= damenarray[occupant].X + 0.5f * boxlength &&
+                        mouseY <= damenarray[occupant].Y + 1.5f * boxlength &&
+                        mouseY >= damenarray[occupant].Y + 0.5f * boxlength){
+                    fill(255, 231, 204);
+
+                    if(mousePressed){
+                        beatDame(damenarray, occupant, selectedDame, 2);                    }
+                }
+                //endregion
+
                 if(!isOccupied){
                     rect(damenarray[occupant].X + 0.5f * boxlength, damenarray[occupant].Y + 0.5f * boxlength, boxlength, boxlength);
                 }
+                fill(242, 218, 191);
             }
         } //endregion
 
         //region occupant links oben
         if(damenarray[selectedDame].Y > damenarray[occupant].Y && damenarray[selectedDame].X > damenarray[occupant].X){
-            if(damenarray[selectedDame].X != leftMargin + 1.5 * boxlength && damenarray[selectedDame].Y != upperMargin + 6.5* boxlength){
+            if(damenarray[selectedDame].X != leftMargin + 1.5 * boxlength && damenarray[selectedDame].Y != upperMargin + 1.5 * boxlength){
 
                 Boolean isOccupied = false;
 
@@ -415,16 +449,31 @@ public class MainClass extends PApplet {
                     }
                 }
 
+                //region hover-Effekt
+
+                if(     mouseX <= damenarray[occupant].X - 0.5f * boxlength &&
+                        mouseX >= damenarray[occupant].X - 1.5f * boxlength &&
+                        mouseY <= damenarray[occupant].Y - 0.5f * boxlength &&
+                        mouseY >= damenarray[occupant].Y - 1.5f * boxlength){
+                    fill(255, 231, 204);
+
+                    if(mousePressed){
+                        beatDame(damenarray, occupant, selectedDame, 3);
+                    }
+                }
+                //endregion
+
                 if(!isOccupied){
                     rect(damenarray[occupant].X - 1.5f * boxlength, damenarray[occupant].Y - 1.5f * boxlength, boxlength, boxlength);
                 }
+                fill(242, 218, 191);
             }
         }//endregion
 
         //region occupant rechts oben
         if(damenarray[selectedDame].Y > damenarray[occupant].Y && damenarray[selectedDame].X < damenarray[occupant].X){
 
-            if(damenarray[selectedDame].X != leftMargin + 1.5 * boxlength && damenarray[selectedDame].Y != upperMargin + 6.5* boxlength){
+            if(damenarray[selectedDame].X != leftMargin + 6.5 * boxlength && damenarray[selectedDame].Y != upperMargin + 1.5* boxlength){
 
                 Boolean isOccupied = false;
 
@@ -434,13 +483,26 @@ public class MainClass extends PApplet {
                     }
                 }
 
+                //region Hover-Effekt
+
+                if(     mouseX <= damenarray[occupant].X + 1.5f * boxlength &&
+                        mouseX >= damenarray[occupant].X + 0.5f * boxlength &&
+                        mouseY <= damenarray[occupant].Y - 0.5f * boxlength &&
+                        mouseY >= damenarray[occupant].Y - 1.5f * boxlength){
+                    fill(255, 231, 204);
+
+                    if(mousePressed){
+                        beatDame(damenarray, occupant, selectedDame, 4);
+                    }
+                }
+                //endregion
+
                 if(!isOccupied){
                     rect(damenarray[occupant].X + 0.5f * boxlength, damenarray[occupant].Y - 1.5f * boxlength, boxlength, boxlength);
                 }
+                fill(242, 218, 191);
             }
         }//endregion
-
-
 
     }
 
@@ -474,5 +536,39 @@ public class MainClass extends PApplet {
         }
 
         return damenarray;
+    }
+
+    public void beatDame(Dame[] damenarray, int occupant, int selectedDame, int caseOfTheArrangement){
+
+        switch (caseOfTheArrangement){
+            case 1:
+                damenarray[selectedDame].X = damenarray[selectedDame].X - 2*boxlength;
+                damenarray[selectedDame].Y = damenarray[selectedDame].Y + 2*boxlength;
+                break;
+            case 2:
+                damenarray[selectedDame].X = damenarray[selectedDame].X + 2*boxlength;
+                damenarray[selectedDame].Y = damenarray[selectedDame].Y + 2*boxlength;
+                break;
+            case 3:
+                damenarray[selectedDame].X = damenarray[selectedDame].X - 2*boxlength;
+                damenarray[selectedDame].Y = damenarray[selectedDame].Y - 2*boxlength;
+                break;
+            case 4:
+                damenarray[selectedDame].X = damenarray[selectedDame].X + 2*boxlength;
+                damenarray[selectedDame].Y = damenarray[selectedDame].Y - 2*boxlength;
+                break;
+                default:
+                    System.out.println("error");
+        }
+
+        damenarray[occupant].X = -1;
+        damenarray[occupant].Y = -1;
+
+        if(whitesturn){
+            whitesturn = false;
+        }else{
+            whitesturn = true;
+        }
+
     }
 }

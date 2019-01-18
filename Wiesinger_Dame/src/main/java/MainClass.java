@@ -90,17 +90,23 @@ public class MainClass extends PApplet {
 
         //region Damen zeichnen
         stroke(0);
-        fill(50);
         for (int i = 12; i < 24; i++) {
             if(damenarray[i].X != -1 && damenarray[i].Y != -1) {
-            ellipse(damenarray[i].X, damenarray[i].Y, boxlength /5f * 4, boxlength /5f * 4);
+                fill(50);
+                ellipse(damenarray[i].X, damenarray[i].Y, boxlength /5f * 4, boxlength /5f * 4);
+                fill(55);
+                ellipse(damenarray[i].X, damenarray[i].Y, boxlength /5f * 3, boxlength /5f * 3);
             }
         }
 
-        fill(245);
         for (int i = 0; i < 12; i++) {
             if(damenarray[i].X != -1 && damenarray[i].Y != -1) {
+                stroke(0);
+                fill(245);
                 ellipse(damenarray[i].X, damenarray[i].Y, boxlength / 5f * 4, boxlength / 5f * 4);
+                stroke(255);
+                fill(240);
+                ellipse(damenarray[i].X, damenarray[i].Y, boxlength / 5f * 3, boxlength / 5f * 3);
             }
         }
         //endregion

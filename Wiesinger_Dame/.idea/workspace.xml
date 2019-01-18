@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="49589de0-52bc-48e0-8c4f-1794759ae886" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainClass.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -76,13 +77,31 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-422801511">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="10" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
+            <state relative-caret-position="300">
               <caret line="20" selection-start-line="20" selection-end-line="20" />
             </state>
           </provider>
@@ -91,16 +110,24 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/MainClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+            <state relative-caret-position="615">
+              <caret line="97" column="94" selection-start-line="97" selection-start-column="94" selection-end-line="97" selection-end-column="94" />
               <folding>
                 <element signature="method#settings#0;class#MainClass#0" />
                 <element signature="method#setup#0;class#MainClass#0" />
+                <element signature="e#719#733#0" />
+                <element signature="e#1477#1498#0" />
+                <element signature="e#3026#3063#0" />
                 <element signature="method#reset#0;class#MainClass#0" />
                 <element signature="method#boardColor#0;class#MainClass#0" />
                 <element signature="method#mouseoverBox#0;class#MainClass#0" />
                 <element signature="method#isMouseOverDame#0;class#MainClass#0" />
                 <element signature="method#drawSuggestion#0;class#MainClass#0" />
+                <element signature="method#beatSuggestion#0;class#MainClass#0" />
+                <element signature="e#13130#13159#0" />
+                <element signature="e#14588#14618#0" />
+                <element signature="e#16047#16075#0" />
+                <element signature="e#17505#17534#0" />
                 <element signature="method#moveDame#0;class#MainClass#0" />
                 <element signature="method#beatDame#0;class#MainClass#0" />
               </folding>
@@ -111,7 +138,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Dame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
+            <state relative-caret-position="135">
               <caret line="9" selection-start-line="9" selection-end-line="9" />
               <folding>
                 <element signature="e#150#151#0" expanded="true" />
@@ -149,6 +176,12 @@
       </list>
     </option>
   </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -168,10 +201,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-33" />
-    <option name="y" value="-15" />
-    <option name="width" value="2916" />
-    <option name="height" value="1116" />
+    <option name="x" value="67" />
+    <option name="y" value="114" />
+    <option name="width" value="916" />
+    <option name="height" value="789" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -181,6 +214,8 @@
     <panes />
   </component>
   <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547803260150" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
@@ -220,6 +255,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1543576342325</updated>
+      <workItem from="1547803451769" duration="1342000" />
     </task>
     <task id="LOCAL-00001" summary="nicht fertig">
       <created>1544775044782</created>
@@ -273,8 +309,12 @@
     <option name="localTasksCounter" value="8" />
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1342000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <frame x="67" y="25" width="1853" height="1055" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49604222" weight="0.302834" />
       <window_info id="Structure" order="1" sideWeight="0.5039578" side_tool="true" weight="0.302834" />
@@ -283,17 +323,19 @@
       <window_info id="UI Designer" order="4" />
       <window_info id="Capture Tool" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" x="1921" y="7" width="956" height="537" id="Run" order="2" sideWeight="0.50040483" side_tool="true" weight="0.3285968" />
+      <window_info active="true" anchor="bottom" x="1921" y="7" width="956" height="537" id="Run" order="2" sideWeight="0.50040483" side_tool="true" visible="true" weight="0.32756758" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49959514" weight="0.3285968" />
+      <window_info anchor="right" id="Database" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -303,6 +345,9 @@
       <window_info anchor="right" id="Palette&#9;" order="6" />
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.32955465" />
     </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -321,14 +366,14 @@
     <entry file="file://F:/SEW/assignment04-robot-processing-wieisngerjonas (erweitert)/src/main/java/at/htl/robot/gui/Main.java" />
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
+        <state relative-caret-position="300">
           <caret line="20" selection-start-line="20" selection-end-line="20" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Dame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
+        <state relative-caret-position="135">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
           <folding>
             <element signature="e#150#151#0" expanded="true" />
@@ -341,16 +386,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/MainClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+        <state relative-caret-position="615">
+          <caret line="97" column="94" selection-start-line="97" selection-start-column="94" selection-end-line="97" selection-end-column="94" />
           <folding>
             <element signature="method#settings#0;class#MainClass#0" />
             <element signature="method#setup#0;class#MainClass#0" />
+            <element signature="e#719#733#0" />
+            <element signature="e#1477#1498#0" />
+            <element signature="e#3026#3063#0" />
             <element signature="method#reset#0;class#MainClass#0" />
             <element signature="method#boardColor#0;class#MainClass#0" />
             <element signature="method#mouseoverBox#0;class#MainClass#0" />
             <element signature="method#isMouseOverDame#0;class#MainClass#0" />
             <element signature="method#drawSuggestion#0;class#MainClass#0" />
+            <element signature="method#beatSuggestion#0;class#MainClass#0" />
+            <element signature="e#13130#13159#0" />
+            <element signature="e#14588#14618#0" />
+            <element signature="e#16047#16075#0" />
+            <element signature="e#17505#17534#0" />
             <element signature="method#moveDame#0;class#MainClass#0" />
             <element signature="method#beatDame#0;class#MainClass#0" />
           </folding>

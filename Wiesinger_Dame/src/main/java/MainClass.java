@@ -97,6 +97,10 @@ public class MainClass extends PApplet {
                 fill(55);
                 ellipse(damenarray[i].X, damenarray[i].Y, boxlength /5f * 3, boxlength /5f * 3);
             }
+
+            if(damenarray[i].Y == upperMargin + boxlength/2){
+                System.out.println("Doppeldame");
+            }
         }
 
         for (int i = 0; i < 12; i++) {
@@ -104,11 +108,16 @@ public class MainClass extends PApplet {
                 stroke(0);
                 fill(245);
                 ellipse(damenarray[i].X, damenarray[i].Y, boxlength / 5f * 4, boxlength / 5f * 4);
-                stroke(255);
-                fill(240);
+                stroke(225);
+                fill(255);
                 ellipse(damenarray[i].X, damenarray[i].Y, boxlength / 5f * 3, boxlength / 5f * 3);
             }
+
+            if(damenarray[i].Y == upperMargin + 7.5 * boxlength){
+                System.out.println("Doppeldame");
+            }
         }
+        stroke(0);
         //endregion
 
         //region untere Box und Restet Button

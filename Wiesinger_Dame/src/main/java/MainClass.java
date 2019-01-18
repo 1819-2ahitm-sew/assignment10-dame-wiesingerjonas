@@ -170,7 +170,7 @@ public class MainClass extends PApplet {
         }
 
         whitesturn = true;
-        selectedDame = 0;
+        selectedDame = -1;
 
         return array;
     }

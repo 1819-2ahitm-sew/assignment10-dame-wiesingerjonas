@@ -24,7 +24,7 @@ public class MainClass extends PApplet {
     public void draw() {
 
         if(start){
-            damenarray = reset();
+            reset();
             start = false;
         }
 
@@ -60,7 +60,7 @@ public class MainClass extends PApplet {
         }
         //endregion
 
-        int hoveredIndex = isMouseOverDame(damenarray, mouseX, mouseY);
+        int hoveredIndex = isMouseOverDame();
 
         //region Hover-Effekt
         if(hoveredIndex != -1){
@@ -86,7 +86,7 @@ public class MainClass extends PApplet {
         }
         //endregion
 
-        drawSuggestion(damenarray, selectedDame);
+        drawSuggestion(selectedDame);
 
         //region Damen zeichnen
         stroke(0);
@@ -131,10 +131,10 @@ public class MainClass extends PApplet {
             text("Schwarz ist an der Reihe", leftMargin + 5, upperMargin * 2 + 8 * boxlength + boxlength / 5);
         }
 
-        if(mouseoverBox(mouseX, mouseY) && mousePressed){
+        if(mouseoverBox() && mousePressed){
             fill(193, 148, 93);
-            damenarray = reset();
-        }else if(mouseoverBox(mouseX, mouseY)){
+            reset();
+        }else if(mouseoverBox()){
             fill(255, 231, 204);
         }else {
             fill(255, 211, 158);
@@ -149,45 +149,45 @@ public class MainClass extends PApplet {
 
     }
 
-    public Dame[] reset(){
-
-        Dame[] array = new Dame[24];
+    public void reset(){
 
         int j = 0;
         for (int i = 0; i < 4; i++) {
-            array[i] = new Dame(leftMargin + j * boxlength + boxlength/2, upperMargin + boxlength/2);
+            damenarray[i] = new Dame(leftMargin + j * boxlength + boxlength/2, upperMargin + boxlength/2);
             j = j + 2;
         }
         j = 1;
         for (int i = 4; i < 8; i++) {
-            array[i] = new Dame(leftMargin + j * boxlength + boxlength/2, upperMargin + boxlength + boxlength/2);
+            damenarray[i] = new Dame(leftMargin + j * boxlength + boxlength/2, upperMargin + boxlength + boxlength/2);
             j = j + 2;
         }
         j = 0;
         for (int i = 8; i < 12; i++) {
-            array[i] = new Dame(leftMargin + j * boxlength + boxlength/2, upperMargin + boxlength/2 + 2 * boxlength);
+            damenarray[i] = new Dame(leftMargin + j * boxlength + boxlength/2, upperMargin + boxlength/2 + 2 * boxlength);
             j = j + 2;
         }
         j = 1;
         for (int i = 12; i < 16; i++) {
-            array[i] = new Dame(leftMargin + j * boxlength + boxlength/2, upperMargin + boxlength/2 + 5 * boxlength);
+            damenarray[i] = new Dame(leftMargin + j * boxlength + boxlength/2, upperMargin + boxlength/2 + 5 * boxlength);
             j = j + 2;
         }
         j = 0;
         for (int i = 16; i < 20; i++) {
-            array[i] = new Dame(leftMargin + j * boxlength + boxlength/2, upperMargin + boxlength/2 + 6 * boxlength);
+            damenarray[i] = new Dame(leftMargin + j * boxlength + boxlength/2, upperMargin + boxlength/2 + 6 * boxlength);
             j = j + 2;
         }
         j = 1;
         for (int i = 20; i < 24; i++) {
-            array[i] = new Dame(leftMargin + j * boxlength + boxlength/2, upperMargin + boxlength/2 + 7 * boxlength);
+            damenarray[i] = new Dame(leftMargin + j * boxlength + boxlength/2, upperMargin + boxlength/2 + 7 * boxlength);
             j = j + 2;
         }
 
         whitesturn = true;
         selectedDame = -1;
 
-        return array;
+        for (int i = 0; i < damenarray.length; i++) {
+            damenarray[i].doppelDame = false;
+        }
     }
 
     public Boolean boardColor(Boolean inversed, int changecolor){
@@ -211,7 +211,7 @@ public class MainClass extends PApplet {
         return color;
     }
 
-    public Boolean mouseoverBox(int mouseX, int mouseY){
+    public Boolean mouseoverBox(){
 
         boolean isItHovering = false;
 
@@ -228,7 +228,7 @@ public class MainClass extends PApplet {
         return isItHovering;
     }
 
-    public int isMouseOverDame(Dame[] damenarray, int mouseX, int mouseY){
+    public int isMouseOverDame(){
 
         for (int i = 0; i < damenarray.length; i++) {
             if(     mouseX > damenarray[i].X - boxlength/2 &&
@@ -243,7 +243,7 @@ public class MainClass extends PApplet {
         return -1;
     }
 
-    public void drawSuggestion(Dame[] damenarray, int selectedDame){
+    public void drawSuggestion(int selectedDame){
 
         fill(242, 218, 191);
         if(selectedDame != -1) {
@@ -267,7 +267,7 @@ public class MainClass extends PApplet {
                             mouseY < damenarray[selectedDame].Y + boxlength * 1.5f){
 
                         if(mousePressed){
-                            damenarray = moveDame(damenarray, selectedDame, 1);
+                            moveDame(selectedDame, 1);
                         }
 
                         fill(255, 231, 204);
@@ -280,7 +280,7 @@ public class MainClass extends PApplet {
 
                 if(isOccupied){
                     if(occupant >= 12){
-                        beatSuggestion(damenarray, selectedDame, occupant);
+                        beatSuggestion(selectedDame, occupant);
                     }
                 }
                 //endregion
@@ -302,7 +302,7 @@ public class MainClass extends PApplet {
                             mouseY < damenarray[selectedDame].Y + boxlength * 1.5f){
 
                         if(mousePressed){
-                            damenarray = moveDame(damenarray, selectedDame, 2);
+                            moveDame(selectedDame, 2);
                         }
 
                         fill(255, 231, 204);
@@ -313,7 +313,7 @@ public class MainClass extends PApplet {
 
                 if(isOccupied){
                     if(occupant >= 12){
-                        beatSuggestion(damenarray, selectedDame, occupant);
+                        beatSuggestion(selectedDame, occupant);
                     }
                 }
                 //endregion
@@ -336,7 +336,7 @@ public class MainClass extends PApplet {
                             mouseY > damenarray[selectedDame].Y - boxlength*1.5f &&
                             mouseY < damenarray[selectedDame].Y - boxlength*0.5f){
                         if(mousePressed){
-                            damenarray = moveDame(damenarray, selectedDame, 3);
+                            moveDame(selectedDame, 3);
                         }
 
                         fill(255, 231, 204);
@@ -347,7 +347,7 @@ public class MainClass extends PApplet {
 
                 if(isOccupied){
                     if(occupant < 12 && occupant != -1){
-                        beatSuggestion(damenarray, selectedDame, occupant);
+                        beatSuggestion(selectedDame, occupant);
                     }
                 }
                 //endregion
@@ -368,7 +368,7 @@ public class MainClass extends PApplet {
                             mouseY > damenarray[selectedDame].Y - boxlength*1.5f &&
                             mouseY < damenarray[selectedDame].Y - boxlength*0.5f){
                         if(mousePressed){
-                            damenarray = moveDame(damenarray, selectedDame, 4);
+                            moveDame(selectedDame, 4);
                         }
                         fill(255, 231, 204);
                     }
@@ -377,7 +377,7 @@ public class MainClass extends PApplet {
                 }
                 if(isOccupied){
                     if(occupant < 12 && occupant != -1){
-                        beatSuggestion(damenarray, selectedDame, occupant);
+                        beatSuggestion(selectedDame, occupant);
                     }
                 }
                 //endregion
@@ -385,7 +385,7 @@ public class MainClass extends PApplet {
         }
     }
 
-    public void beatSuggestion(Dame[] damenarray, int selectedDame, int occupant){
+    public void beatSuggestion(int selectedDame, int occupant){
 
         //region occupant links unten
         if(damenarray[selectedDame].Y < damenarray[occupant].Y && damenarray[selectedDame].X > damenarray[occupant].X){
@@ -408,7 +408,7 @@ public class MainClass extends PApplet {
                     fill(255, 231, 204);
 
                     if(mousePressed){
-                        beatDame(damenarray, occupant, selectedDame, 1);
+                        beatDame(occupant, selectedDame, 1);
                     }
                 }
                 //endregion
@@ -441,7 +441,7 @@ public class MainClass extends PApplet {
                     fill(255, 231, 204);
 
                     if(mousePressed){
-                        beatDame(damenarray, occupant, selectedDame, 2);                    }
+                        beatDame(occupant, selectedDame, 2);                    }
                 }
                 //endregion
 
@@ -473,7 +473,7 @@ public class MainClass extends PApplet {
                     fill(255, 231, 204);
 
                     if(mousePressed){
-                        beatDame(damenarray, occupant, selectedDame, 3);
+                        beatDame(occupant, selectedDame, 3);
                     }
                 }
                 //endregion
@@ -507,7 +507,7 @@ public class MainClass extends PApplet {
                     fill(255, 231, 204);
 
                     if(mousePressed){
-                        beatDame(damenarray, occupant, selectedDame, 4);
+                        beatDame(occupant, selectedDame, 4);
                     }
                 }
                 //endregion
@@ -521,7 +521,7 @@ public class MainClass extends PApplet {
 
     }
 
-    public Dame[] moveDame(Dame[] damenarray, int selectedDame, int direction){
+    public void moveDame(int selectedDame, int direction){
         int x = damenarray[selectedDame].X;
         int y = damenarray[selectedDame].Y;
 
@@ -550,10 +550,9 @@ public class MainClass extends PApplet {
             whitesturn = true;
         }
 
-        return damenarray;
     }
 
-    public void beatDame(Dame[] damenarray, int occupant, int selectedDame, int caseOfTheArrangement){
+    public void beatDame(int occupant, int selectedDame, int caseOfTheArrangement){
 
         switch (caseOfTheArrangement){
             case 1:

@@ -99,7 +99,13 @@ public class MainClass extends PApplet {
             }
 
             if(damenarray[i].Y == upperMargin + boxlength/2){
-                System.out.println("Doppeldame");
+                damenarray[i].doppelDame = true;
+            }
+            if(damenarray[i].doppelDame){
+                fill(50);
+                ellipse(damenarray[i].X, damenarray[i].Y -boxlength/8, boxlength /5f * 4, boxlength /5f * 4);
+                fill(55);
+                ellipse(damenarray[i].X, damenarray[i].Y -boxlength/8, boxlength /5f * 3, boxlength /5f * 3);
             }
         }
 
@@ -114,7 +120,17 @@ public class MainClass extends PApplet {
             }
 
             if(damenarray[i].Y == upperMargin + 7.5 * boxlength){
-                System.out.println("Doppeldame");
+
+                damenarray[i].doppelDame = true;
+
+            }
+            if(damenarray[i].doppelDame){
+                stroke(0);
+                fill(245);
+                ellipse(damenarray[i].X, damenarray[i].Y -boxlength/8, boxlength / 5f * 4, boxlength / 5f * 4);
+                stroke(225);
+                fill(255);
+                ellipse(damenarray[i].X, damenarray[i].Y -boxlength/8, boxlength / 5f * 3, boxlength / 5f * 3);
             }
         }
         stroke(0);

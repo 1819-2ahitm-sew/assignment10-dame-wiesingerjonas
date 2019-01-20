@@ -167,7 +167,7 @@ public class MainClass extends PApplet {
 
     }
 
-    public void reset() {
+    private void reset() {
 
         int j = 0;
         for (int i = 0; i < 4; i++) {
@@ -203,36 +203,32 @@ public class MainClass extends PApplet {
         whitesturn = true;
         selectedDame = -1;
 
-        for (int i = 0; i < damenarray.length; i++) {
-            damenarray[i].doppelDame = false;
+        for (Dame i:damenarray){
+            i.doppelDame = false;
         }
 
         damenarray[9].doppelDame = true;
         damenarray[13].doppelDame = true;
     }
 
-    public Boolean boardColor(Boolean inversed, int changecolor) {
-
-        Boolean color = false;
+    private Boolean boardColor(Boolean inversed, int changecolor) {
 
         if (!inversed) {
             if (changecolor % 2 == 0) {
-                color = true;
+                return true;
             } else {
-                color = false;
+                return false;
             }
         } else {
             if (changecolor % 2 == 0) {
-                color = false;
+                return false;
             } else {
-                color = true;
+                return true;
             }
         }
-
-        return color;
     }
 
-    public Boolean mouseoverBox() {
+    private Boolean mouseoverBox() {
 
         if (mouseX >= leftMargin + 2 * boxlength &&
                 mouseX <= leftMargin + 6 * boxlength &&
@@ -244,7 +240,7 @@ public class MainClass extends PApplet {
         }
     }
 
-    public int isMouseOverDame() {
+    private int isMouseOverDame() {
 
         for (int i = 0; i < damenarray.length; i++) {
             if (mouseX > damenarray[i].X - boxlength / 2 &&
@@ -259,7 +255,7 @@ public class MainClass extends PApplet {
         return -1;
     }
 
-    public void drawSuggestion(int selectedDame) {
+    private void drawSuggestion(int selectedDame) {
 
         fill(242, 218, 191);
 
@@ -361,7 +357,7 @@ public class MainClass extends PApplet {
             }
 
             if (isOccupied) {
-                if (occupant < 12 && occupant != -1) {
+                if (occupant < 12) {
                     beatSuggestion(selectedDame, occupant);
                 }
             }
@@ -391,7 +387,7 @@ public class MainClass extends PApplet {
                 rect(damenarray[selectedDame].X + boxlength * 0.5f, damenarray[selectedDame].Y - boxlength * 1.5f, boxlength, boxlength);
             }
             if (isOccupied) {
-                if (occupant < 12 && occupant != -1) {
+                if (occupant < 12) {
                     beatSuggestion(selectedDame, occupant);
                 }
             }
@@ -401,7 +397,7 @@ public class MainClass extends PApplet {
 
     }
 
-    public void drawDoubleSuggestion(int selectedDame) {
+    private void drawDoubleSuggestion(int selectedDame) {
 
         fill(242, 218, 191);
 
@@ -440,7 +436,7 @@ public class MainClass extends PApplet {
                 if (occupant >= 12) {
                     beatSuggestion(selectedDame, occupant);
                 }
-            }else if(isOccupied && !whitesturn){
+            }else if(isOccupied){
                 if (occupant <= 12) {
                     beatSuggestion(selectedDame, occupant);
                 }
@@ -506,7 +502,7 @@ public class MainClass extends PApplet {
             }
 
             if (isOccupied) {
-                if (occupant < 12 && occupant != -1) {
+                if (occupant < 12) {
                     beatSuggestion(selectedDame, occupant);
                 }
             }
@@ -536,7 +532,7 @@ public class MainClass extends PApplet {
                 rect(damenarray[selectedDame].X + boxlength * 0.5f, damenarray[selectedDame].Y - boxlength * 1.5f, boxlength, boxlength);
             }
             if (isOccupied) {
-                if (occupant < 12 && occupant != -1) {
+                if (occupant < 12) {
                     beatSuggestion(selectedDame, occupant);
                 }
             }
@@ -545,7 +541,7 @@ public class MainClass extends PApplet {
         }
     }
 
-    public void beatSuggestion(int selectedDame, int occupant){
+    private void beatSuggestion(int selectedDame, int occupant){
 
         //region occupant links unten
         if(damenarray[selectedDame].Y < damenarray[occupant].Y && damenarray[selectedDame].X > damenarray[occupant].X){
@@ -553,8 +549,8 @@ public class MainClass extends PApplet {
 
                 Boolean isOccupied = false;
 
-                for (int i = 0; i < damenarray.length; i++) {
-                    if(damenarray[i].X == damenarray[occupant].X - boxlength && damenarray[i].Y == damenarray[occupant].Y + boxlength){
+                for (Dame i : damenarray) {
+                    if(i.X == damenarray[occupant].X - boxlength && i.Y == damenarray[occupant].Y + boxlength){
                         isOccupied = true;
                     }
                 }
@@ -586,8 +582,8 @@ public class MainClass extends PApplet {
 
                 Boolean isOccupied = false;
 
-                for (int i = 0; i < damenarray.length; i++) {
-                    if(damenarray[i].X == damenarray[occupant].X + boxlength && damenarray[i].Y == damenarray[occupant].Y + boxlength){
+                for (Dame i : damenarray) {
+                    if(i.X == damenarray[occupant].X + boxlength && i.Y == damenarray[occupant].Y + boxlength){
                         isOccupied = true;
                     }
                 }
@@ -618,8 +614,8 @@ public class MainClass extends PApplet {
 
                 Boolean isOccupied = false;
 
-                for (int i = 0; i < damenarray.length; i++) {
-                    if(damenarray[i].X == damenarray[occupant].X - boxlength && damenarray[i].Y == damenarray[occupant].Y - boxlength){
+                for (Dame i : damenarray) {
+                    if(i.X == damenarray[occupant].X - boxlength && i.Y == damenarray[occupant].Y - boxlength){
                         isOccupied = true;
                     }
                 }
@@ -652,8 +648,8 @@ public class MainClass extends PApplet {
 
                 Boolean isOccupied = false;
 
-                for (int i = 0; i < damenarray.length; i++) {
-                    if(damenarray[i].X == damenarray[occupant].X + boxlength && damenarray[i].Y == damenarray[occupant].Y - boxlength){
+                for (Dame i : damenarray) {
+                    if(i.X == damenarray[occupant].X + boxlength && i.Y == damenarray[occupant].Y - boxlength){
                         isOccupied = true;
                     }
                 }
@@ -681,7 +677,7 @@ public class MainClass extends PApplet {
 
     }
 
-    public void moveDame(int selectedDame, int direction){
+    private void moveDame(int selectedDame, int direction){
         int x = damenarray[selectedDame].X;
         int y = damenarray[selectedDame].Y;
 
@@ -704,15 +700,11 @@ public class MainClass extends PApplet {
         damenarray[selectedDame].setX(x);
         damenarray[selectedDame].setY(y);
 
-        if(whitesturn){
-            whitesturn = false;
-        }else{
-            whitesturn = true;
-        }
+        whitesturn = !whitesturn;
 
     }
 
-    public void beatDame(int occupant, int selectedDame, int caseOfTheArrangement){
+    private void beatDame(int occupant, int selectedDame, int caseOfTheArrangement){
 
         switch (caseOfTheArrangement){
             case 1:
@@ -738,11 +730,7 @@ public class MainClass extends PApplet {
         damenarray[occupant].X = -1;
         damenarray[occupant].Y = -1;
 
-        if(whitesturn){
-            whitesturn = false;
-        }else{
-            whitesturn = true;
-        }
+        whitesturn = !whitesturn;
 
     }
 }

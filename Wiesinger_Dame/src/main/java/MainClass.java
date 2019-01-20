@@ -2,13 +2,13 @@ import processing.core.PApplet;
 
 public class MainClass extends PApplet {
 
-    int leftMargin = 20;
-    int upperMargin = 20;
-    int boxlength = 80;
-    int selectedDame = -1;
-    Dame[] damenarray = new Dame[24];
-    boolean start = true;
-    boolean whitesturn = true;
+    private int leftMargin = 20;
+    private int upperMargin = 20;
+    private int boxlength = 80;
+    private int selectedDame = -1;
+    private Dame[] damenarray = new Dame[24];
+    private boolean start = true;
+    private boolean whitesturn = true;
 
     public static void main(String[] args) {
         PApplet.main("MainClass", args);
@@ -33,15 +33,12 @@ public class MainClass extends PApplet {
 
         int changecolor = 0;
         boolean inversed = false;
-        boolean color;
         background(200);
 
 
         //region Brett
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
-
-                color = boardColor(inversed, changecolor);
                 changecolor++;
 
                 if (boardColor(inversed, changecolor)) {
@@ -54,11 +51,8 @@ public class MainClass extends PApplet {
                 stroke(193, 148, 93);
                 rect(leftMargin + j * boxlength, upperMargin + i * boxlength, boxlength, boxlength);
             }
-            if (inversed) {
-                inversed = false;
-            } else {
-                inversed = true;
-            }
+
+            inversed = !inversed;
 
         }
         //endregion
@@ -78,7 +72,7 @@ public class MainClass extends PApplet {
             } else {
                 fill(255, 231, 204);
             }
-            rect(damenarray[hoveredIndex].X - boxlength / 2, damenarray[hoveredIndex].Y - boxlength / 2, boxlength, boxlength);
+            rect(damenarray[hoveredIndex].X - boxlength/2, damenarray[hoveredIndex].Y - boxlength / 2, boxlength, boxlength);
         }
 
         fill(255);

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="49589de0-52bc-48e0-8c4f-1794759ae886" name="Default Changelist" comment="">
+    <list default="true" id="49589de0-52bc-48e0-8c4f-1794759ae886" name="Default Changelist" comment="Dopeldamen können schon fahren, schlagen funktioniert noch nicht ganz!">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainClass.java" afterDir="false" />
     </list>
@@ -107,14 +107,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="500" />
-          <entry key="txt" value="164" />
+          <entry key="java" value="704" />
+          <entry key="txt" value="324" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="500" />
-          <entry key="PLAIN_TEXT" value="164" />
+          <entry key="JAVA" value="704" />
+          <entry key="PLAIN_TEXT" value="324" />
         </counts>
       </usages-collector>
     </session>
@@ -133,24 +133,32 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/MainClass.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="114">
-              <caret line="540" column="4" selection-start-line="540" selection-start-column="4" selection-end-line="540" selection-end-column="4" />
+            <state relative-caret-position="185">
+              <caret line="175" column="24" selection-start-line="175" selection-start-column="24" selection-end-line="175" selection-end-column="24" />
               <folding>
                 <element signature="method#settings#0;class#MainClass#0" />
                 <element signature="method#setup#0;class#MainClass#0" />
                 <element signature="e#706#720#0" />
                 <element signature="e#1438#1459#0" />
-                <element signature="e#2416#2439#0" />
+                <element signature="e#2677#2700#0" />
+                <element signature="e#4588#4625#0" />
                 <element signature="method#reset#0;class#MainClass#0" />
                 <element signature="method#boardColor#0;class#MainClass#0" />
                 <element signature="method#mouseoverBox#0;class#MainClass#0" />
                 <element signature="method#isMouseOverDame#0;class#MainClass#0" />
                 <element signature="method#drawSuggestion#0;class#MainClass#0" />
-                <element signature="e#13849#13869#0" />
+                <element signature="method#drawDoubleSuggestion#0;class#MainClass#0" />
+                <element signature="e#14226#14246#0" />
                 <element signature="e#15137#15158#0" />
                 <element signature="e#16493#16513#0" />
                 <element signature="e#17852#17871#0" />
                 <element signature="method#beatSuggestion#0;class#MainClass#0" />
+                <element signature="e#19154#19183#0" />
+                <element signature="e#19786#19807#0" />
+                <element signature="e#20600#20630#0" />
+                <element signature="e#21233#21254#0" />
+                <element signature="e#22047#22075#0" />
+                <element signature="e#23493#23522#0" />
                 <element signature="method#moveDame#0;class#MainClass#0" />
                 <element signature="method#beatDame#0;class#MainClass#0" />
               </folding>
@@ -344,7 +352,21 @@
       <option name="project" value="LOCAL" />
       <updated>1547913148799</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Methode drawDoubleSuggestion wird aufgerufen, funktioniert aber noch nicht richtig">
+      <created>1547967358792</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1547967358792</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Methode drawDoubleSuggestion wird aufgerufen, funktioniert aber noch nicht richtig">
+      <created>1547969913621</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1547969913621</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -401,7 +423,9 @@
     <MESSAGE value="Programm erkennt ob Dame sich am gegenüberliegendem Ende des Spielfelds befindet" />
     <MESSAGE value="Code verschönert" />
     <MESSAGE value="Doppeldamen werden erstellt, man kann sie aber noch nicht benutzen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Doppeldamen werden erstellt, man kann sie aber noch nicht benutzen" />
+    <MESSAGE value="Methode drawDoubleSuggestion wird aufgerufen, funktioniert aber noch nicht richtig" />
+    <MESSAGE value="Dopeldamen können schon fahren, schlagen funktioniert noch nicht ganz!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dopeldamen können schon fahren, schlagen funktioniert noch nicht ganz!" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://F:/SEW/assignment04-robot-processing-wieisngerjonas (erweitert)/src/main/java/at/htl/robot/gui/Main.java" />
@@ -421,24 +445,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/MainClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="540" column="4" selection-start-line="540" selection-start-column="4" selection-end-line="540" selection-end-column="4" />
+        <state relative-caret-position="185">
+          <caret line="175" column="24" selection-start-line="175" selection-start-column="24" selection-end-line="175" selection-end-column="24" />
           <folding>
             <element signature="method#settings#0;class#MainClass#0" />
             <element signature="method#setup#0;class#MainClass#0" />
             <element signature="e#706#720#0" />
             <element signature="e#1438#1459#0" />
-            <element signature="e#2416#2439#0" />
+            <element signature="e#2677#2700#0" />
+            <element signature="e#4588#4625#0" />
             <element signature="method#reset#0;class#MainClass#0" />
             <element signature="method#boardColor#0;class#MainClass#0" />
             <element signature="method#mouseoverBox#0;class#MainClass#0" />
             <element signature="method#isMouseOverDame#0;class#MainClass#0" />
             <element signature="method#drawSuggestion#0;class#MainClass#0" />
-            <element signature="e#13849#13869#0" />
+            <element signature="method#drawDoubleSuggestion#0;class#MainClass#0" />
+            <element signature="e#14226#14246#0" />
             <element signature="e#15137#15158#0" />
             <element signature="e#16493#16513#0" />
             <element signature="e#17852#17871#0" />
             <element signature="method#beatSuggestion#0;class#MainClass#0" />
+            <element signature="e#19154#19183#0" />
+            <element signature="e#19786#19807#0" />
+            <element signature="e#20600#20630#0" />
+            <element signature="e#21233#21254#0" />
+            <element signature="e#22047#22075#0" />
+            <element signature="e#23493#23522#0" />
             <element signature="method#moveDame#0;class#MainClass#0" />
             <element signature="method#beatDame#0;class#MainClass#0" />
           </folding>

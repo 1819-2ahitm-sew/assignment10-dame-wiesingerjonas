@@ -104,16 +104,16 @@ public class MainClass extends PApplet {
                 ellipse(damenarray[i].X, damenarray[i].Y, boxlength / 5f * 4, boxlength / 5f * 4);
                 fill(55);
                 ellipse(damenarray[i].X, damenarray[i].Y, boxlength / 5f * 3, boxlength / 5f * 3);
-            }
 
-            if (damenarray[i].Y == upperMargin + boxlength / 2) {
-                damenarray[i].doppelDame = true;
-            }
-            if (damenarray[i].doppelDame) {
-                fill(50);
-                ellipse(damenarray[i].X, damenarray[i].Y - boxlength / 8, boxlength / 5f * 4, boxlength / 5f * 4);
-                fill(55);
-                ellipse(damenarray[i].X, damenarray[i].Y - boxlength / 8, boxlength / 5f * 3, boxlength / 5f * 3);
+                if (damenarray[i].Y == upperMargin + boxlength / 2) {
+                    damenarray[i].doppelDame = true;
+                }
+                if (damenarray[i].doppelDame) {
+                    fill(50);
+                    ellipse(damenarray[i].X, damenarray[i].Y - boxlength / 8, boxlength / 5f * 4, boxlength / 5f * 4);
+                    fill(55);
+                    ellipse(damenarray[i].X, damenarray[i].Y - boxlength / 8, boxlength / 5f * 3, boxlength / 5f * 3);
+                }
             }
         }
 
@@ -125,20 +125,20 @@ public class MainClass extends PApplet {
                 stroke(225);
                 fill(255);
                 ellipse(damenarray[i].X, damenarray[i].Y, boxlength / 5f * 3, boxlength / 5f * 3);
-            }
 
-            if (damenarray[i].Y == upperMargin + 7.5 * boxlength) {
+                if (damenarray[i].Y == upperMargin + 7.5 * boxlength) {
 
-                damenarray[i].doppelDame = true;
+                    damenarray[i].doppelDame = true;
 
-            }
-            if (damenarray[i].doppelDame) {
-                stroke(0);
-                fill(245);
-                ellipse(damenarray[i].X, damenarray[i].Y - boxlength / 8, boxlength / 5f * 4, boxlength / 5f * 4);
-                stroke(225);
-                fill(255);
-                ellipse(damenarray[i].X, damenarray[i].Y - boxlength / 8, boxlength / 5f * 3, boxlength / 5f * 3);
+                }
+                if (damenarray[i].doppelDame) {
+                    stroke(0);
+                    fill(245);
+                    ellipse(damenarray[i].X, damenarray[i].Y - boxlength / 8, boxlength / 5f * 4, boxlength / 5f * 4);
+                    stroke(225);
+                    fill(255);
+                    ellipse(damenarray[i].X, damenarray[i].Y - boxlength / 8, boxlength / 5f * 3, boxlength / 5f * 3);
+                }
             }
         }
         stroke(0);
@@ -212,6 +212,9 @@ public class MainClass extends PApplet {
         for (int i = 0; i < damenarray.length; i++) {
             damenarray[i].doppelDame = false;
         }
+
+        damenarray[9].doppelDame = true;
+        damenarray[13].doppelDame = true;
     }
 
     public Boolean boardColor(Boolean inversed, int changecolor) {
@@ -420,7 +423,7 @@ public class MainClass extends PApplet {
                     occupant = i;
                 }
             }
-            if (!isOccupied && damenarray[selectedDame].X != leftMargin + boxlength / 2) {
+            if (!isOccupied && damenarray[selectedDame].X != leftMargin + boxlength / 2 && damenarray[selectedDame].Y != upperMargin + 7.5 * boxlength) {
 
                 if (mouseX > damenarray[selectedDame].X - boxlength * 1.5f &&
                         mouseX < damenarray[selectedDame].X - boxlength * 0.5f &&
@@ -439,8 +442,12 @@ public class MainClass extends PApplet {
 
             }
 
-            if (isOccupied) {
+            if (isOccupied && whitesturn) {
                 if (occupant >= 12) {
+                    beatSuggestion(selectedDame, occupant);
+                }
+            }else if(isOccupied && !whitesturn){
+                if (occupant <= 12) {
                     beatSuggestion(selectedDame, occupant);
                 }
             }

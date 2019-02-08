@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="49589de0-52bc-48e0-8c4f-1794759ae886" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MainClass.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainClass.java" afterDir="false" />
-    </list>
+    <list default="true" id="49589de0-52bc-48e0-8c4f-1794759ae886" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -98,25 +95,26 @@
     <session id="-1383387084">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="7" />
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.6" value="2" />
           <entry key="project.open.time.7" value="2" />
           <entry key="project.open.time.8" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.opened" value="8" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="java" value="1244" />
-          <entry key="txt" value="373" />
+          <entry key="txt" value="388" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="1244" />
-          <entry key="PLAIN_TEXT" value="373" />
+          <entry key="PLAIN_TEXT" value="388" />
         </counts>
       </usages-collector>
     </session>
@@ -140,28 +138,13 @@
               <folding>
                 <element signature="method#settings#0;class#MainClass#0" />
                 <element signature="method#setup#0;class#MainClass#0" />
-                <element signature="e#744#758#0" />
-                <element signature="e#1329#1350#0" />
-                <element signature="e#2559#2582#0" />
                 <element signature="method#reset#0;class#MainClass#0" />
                 <element signature="method#boardColor#0;class#MainClass#0" />
                 <element signature="method#mouseoverBox#0;class#MainClass#0" />
                 <element signature="method#isMouseOverDame#0;class#MainClass#0" />
                 <element signature="method#drawSuggestion#0;class#MainClass#0" />
-                <element signature="e#8208#8234#0" />
                 <element signature="method#drawDoubleSuggestion#0;class#MainClass#0" />
-                <element signature="e#13925#13945#0" />
-                <element signature="e#15321#15342#0" />
-                <element signature="e#16714#16734#0" />
-                <element signature="e#18106#18125#0" />
-                <element signature="e#20917#20938#0" />
-                <element signature="e#22310#22330#0" />
-                <element signature="e#23702#23721#0" />
                 <element signature="method#beatSuggestion#0;class#MainClass#0" />
-                <element signature="e#25127#25156#0" />
-                <element signature="e#26531#26561#0" />
-                <element signature="e#27936#27964#0" />
-                <element signature="e#29340#29369#0" />
                 <element signature="method#moveDame#0;class#MainClass#0" />
                 <element signature="method#beatDame#0;class#MainClass#0" />
               </folding>
@@ -390,7 +373,14 @@
       <option name="project" value="LOCAL" />
       <updated>1547975511971</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="neuester Stand!">
+      <created>1549009633539</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1549009633539</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -398,6 +388,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49604222" weight="0.302834" />
       <window_info id="Structure" order="1" sideWeight="0.5039578" side_tool="true" weight="0.302834" />
@@ -450,7 +441,8 @@
     <MESSAGE value="Dopeldamen können schon fahren, schlagen funktioniert noch nicht ganz!" />
     <MESSAGE value="Fehlermeldungen teilweise abgearbeitet!" />
     <MESSAGE value="Weitere Fehlermeldungen abgearbeitet!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Weitere Fehlermeldungen abgearbeitet!" />
+    <MESSAGE value="neuester Stand!" />
+    <option name="LAST_COMMIT_MESSAGE" value="neuester Stand!" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://F:/SEW/assignment04-robot-processing-wieisngerjonas (erweitert)/src/main/java/at/htl/robot/gui/Main.java" />
@@ -475,28 +467,13 @@
           <folding>
             <element signature="method#settings#0;class#MainClass#0" />
             <element signature="method#setup#0;class#MainClass#0" />
-            <element signature="e#744#758#0" />
-            <element signature="e#1329#1350#0" />
-            <element signature="e#2559#2582#0" />
             <element signature="method#reset#0;class#MainClass#0" />
             <element signature="method#boardColor#0;class#MainClass#0" />
             <element signature="method#mouseoverBox#0;class#MainClass#0" />
             <element signature="method#isMouseOverDame#0;class#MainClass#0" />
             <element signature="method#drawSuggestion#0;class#MainClass#0" />
-            <element signature="e#8208#8234#0" />
             <element signature="method#drawDoubleSuggestion#0;class#MainClass#0" />
-            <element signature="e#13925#13945#0" />
-            <element signature="e#15321#15342#0" />
-            <element signature="e#16714#16734#0" />
-            <element signature="e#18106#18125#0" />
-            <element signature="e#20917#20938#0" />
-            <element signature="e#22310#22330#0" />
-            <element signature="e#23702#23721#0" />
             <element signature="method#beatSuggestion#0;class#MainClass#0" />
-            <element signature="e#25127#25156#0" />
-            <element signature="e#26531#26561#0" />
-            <element signature="e#27936#27964#0" />
-            <element signature="e#29340#29369#0" />
             <element signature="method#moveDame#0;class#MainClass#0" />
             <element signature="method#beatDame#0;class#MainClass#0" />
           </folding>
